@@ -37,8 +37,51 @@ public class HomeController {
 		
 		List<Lista> ListAyudaC = new ArrayList<>();
 		ListAyudaC.add(AyudaC);
-
-
+		
+		//Libros y categorias
+		
+		Lista LibrosC = new Lista();
+		LibrosC.setArte("Arte");
+		LibrosC.setBiografias("Biografias");
+		LibrosC.setCiencias("Ciencias");
+		LibrosC.setComputacion("Computacion");
+		LibrosC.setDeportes("Deportes");
+		LibrosC.setDerecho("Derecho");
+		LibrosC.setEconomia("Economia");
+		LibrosC.setEstilosDeVida("Estilos de Vida");
+		LibrosC.setFiccion("Ficcion");
+		LibrosC.setFilosofiaYreligion("Filosofia y Religion");
+		LibrosC.setInfantilesYjuveniles("Infantiles y Juveniles");
+		
+		
+		List<Lista> ListLibrosC = new ArrayList<>();
+		ListLibrosC.add(LibrosC);
+		
+		//Metodos de pago
+		
+		Lista MetodosP = new Lista();
+		MetodosP.setTarjetasDeCredito("Tarjetas de Credito");
+		MetodosP.setPaypal("Paypal");
+		
+		List<Lista> ListMetodosP = new ArrayList<>();
+		ListMetodosP.add(MetodosP);
+		
+		//Sobre Nosotros
+		
+		Lista SobreN = new Lista();
+		SobreN.setInformacionDeLaCompañia("Informacion de la Compañia");
+		SobreN.setNoticias("Noticias");
+		SobreN.setInversores("Inversores");
+		SobreN.setPoliticas("Politicas");
+		SobreN.setValoracionDeLosClientes("Valoracion de los clientes");
+		
+		
+		List<Lista> ListSobreN = new ArrayList<>();
+		ListSobreN.add(SobreN);
+		
+		model.addAttribute("SobreN", ListSobreN);
+		model.addAttribute("MetodosP", ListMetodosP);
+		model.addAttribute("LibrosC", ListLibrosC);
 		model.addAttribute("AyudaC", ListAyudaC);	
 		model.addAttribute("TituloPagina", titlePage);
 		model.addAttribute("Titulo", "Tienda");

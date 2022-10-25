@@ -800,7 +800,7 @@
                                 
                                 
                                 
-                                <!--Llamamos lista-->
+                                <!--Llamamos lista de AyudaC-->
                       
                                     <h4>Ayuda y Contacto</h4>
                                     <ul class="flexcol" th:each="Lista : ${AyudaC}">
@@ -814,35 +814,44 @@
                                 
                                 
                                 
+                                <!--Llamamos lista de LibrosC-->
                                 
                             </div>
                             <div class="row">
                                 <div class="item mini-links">
                                     <h4>Libros Categorías</h4>
-                                    <ul class="flexcol">
-                                        <li><a href="#">Arte</a></li>
-                                        <li><a href="#">Biografías</a></li>
-                                        <li><a href="#">Ciencias</a></li>
-                                        <li><a href="#">Computación</a></li>
-                                        <li><a href="#">Deportes</a></li>
-                                        <li><a href="#">Derecho</a></li>
-                                        <li><a href="#">Economía</a></li>
-                                        <li><a href="#">Estilos de Vida</a></li>
-                                        <li><a href="#">Ficción</a></li>
-                                        <li><a href="#">Filosofía y Religión</a></li>
-                                        <li><a href="#">Infantiles y Juveniles</a></li>
+                                    <ul class="flexcol" th:each="Lista : ${LibrosC}">
+                                        <li th:text="${Lista.Arte}"><a href="#"></a>   </li>
+                                        <li th:text="${Lista.Biografias}"><a href="#"></a>  </li>
+                                        <li th:text="${Lista.Ciencias}"><a href="#"></a>  </li>
+                                        <li th:text="${Lista.Computacion}"><a href="#"></a>  </li>
+                                        <li th:text="${Lista.Deportes}"><a href="#"></a>  </li>
+                                        <li th:text="${Lista.Derecho}"><a href="#"></a>  </li>
+                                        <li th:text="${Lista.Economia}"><a href="#"></a>  </li>
+                                        <li th:text="${Lista.EstilosDeVida}"><a href="#"></a>  </li>
+                                        <li th:text="${Lista.Ficcion}"><a href="#"></a>  </li>
+                                        <li th:text="${Lista.FilosofiaYreligion}"><a href="#"></a>  </li>
+                                        <li th:text="${Lista.InfantilesYjuveniles}"><a href="#"></a>  </li>
                                     </ul>
                                 </div>
                             </div>
+                            
+                            
+                            	<!--Llamamos lista de MetodosP-->
+                            	
+                            	
                             <div class="row">
                                 <div class="item mini-links">
                                     <h4>Métodos de Pago</h4>
-                                    <ul class="flexcol">
-                                        <li><a href="#">Tarjetas de Créditos</a></li>
-                                        <li><a href="#">Paypal</a></li>
+                                    <ul class="flexcol" th:each="Lista : ${MetodosP}">
+                                        <li th:text="${Lista.TarjetasDeCredito}"><a href="#"></a>   </li>
+                                        <li th:text="${Lista.Paypal}"><a href="#"></a>   </li>
                                     </ul>
                                 </div>
                             </div>
+                            
+                            	<!--Llamamos lista de SobreN-->
+                            	
                             <div class="row">
                                 <div class="item mini-links">
                                     <h4>Sobre Nosotros</h4>
