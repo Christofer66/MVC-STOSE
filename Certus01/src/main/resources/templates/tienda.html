@@ -844,8 +844,8 @@
                                 <div class="item mini-links">
                                     <h4>Métodos de Pago</h4>
                                     <ul class="flexcol" th:each="Lista : ${MetodosP}">
-                                        <li th:text="${Lista.TarjetasDeCredito}"><a href="#"></a>   </li>
-                                        <li th:text="${Lista.Paypal}"><a href="#"></a>   </li>
+                                        <li><a href="#" th:text="${Lista.TarjetasDeCredito}"></a></li>
+                                        <li><a href="#" th:text="${Lista.Paypal}"></a></li>
                                     </ul>
                                 </div>
                             </div>
