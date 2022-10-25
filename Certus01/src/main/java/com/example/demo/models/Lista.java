@@ -27,21 +27,21 @@ public class Lista {
 	private String Paypal;
 	
 	//Sobre nosotros
-	private String InformacionDeLaCompañia;
+	
+	private String Icompañia;
 	private String Noticias;
 	private String Inversores;
-	private String Politicas;
-	private String ValoracionDeLosClientes;
+	private String Políticas;
+	private String ClienteV;
 	
 	
 	
 	//SOBRE NOSOTROS
-	
-	public String getInformacionDeLaCompañia() {
-		return InformacionDeLaCompañia;
+	public String getIcompañia() {
+		return Icompañia;
 	}
-	public void setInformacionDeLaCompañia(String informacionDeLaCompañia) {
-		InformacionDeLaCompañia = informacionDeLaCompañia;
+	public void setIcompañia(String icompañia) {
+		Icompañia = icompañia;
 	}
 	public String getNoticias() {
 		return Noticias;
@@ -55,18 +55,19 @@ public class Lista {
 	public void setInversores(String inversores) {
 		Inversores = inversores;
 	}
-	public String getPoliticas() {
-		return Politicas;
+	public String getPolíticas() {
+		return Políticas;
 	}
-	public void setPoliticas(String politicas) {
-		Politicas = politicas;
+	public void setPolíticas(String políticas) {
+		Políticas = políticas;
 	}
-	public String getValoracionDeLosClientes() {
-		return ValoracionDeLosClientes;
+	public String getClienteV() {
+		return ClienteV;
 	}
-	public void setValoracionDeLosClientes(String valoracionDeLosClientes) {
-		ValoracionDeLosClientes = valoracionDeLosClientes;
+	public void setClienteV(String clienteV) {
+		ClienteV = clienteV;
 	}
+	
 	
 	
 	

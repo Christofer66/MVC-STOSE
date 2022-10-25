@@ -804,11 +804,11 @@
                       
                                     <h4>Ayuda y Contacto</h4>
                                     <ul class="flexcol" th:each="Lista : ${AyudaC}">
-                                        <li th:text="${Lista.Cuenta}"><a href="#"></a></li>
-                                        <li th:text="${Lista.Pedidos}"><a href="#"></a></li>
-                                        <li th:text="${Lista.Envios}"><a href="#"></a></li>
-                                        <li th:text="${Lista.Devoluciones}"><a href="#"></a></li>
-                                        <li th:text="${Lista.Contactanos}"><a href="#"></a></li>
+                                        <li><a href="#" th:text="${Lista.Cuenta}"></a></li>
+                                        <li><a href="#" th:text="${Lista.Pedidos}"></a></li>
+                                        <li><a href="#" th:text="${Lista.Envios}"></a></li>
+                                        <li><a href="#" th:text="${Lista.Devoluciones}"></a></li>
+                                        <li><a href="#" th:text="${Lista.Contactanos}"></a></li>
                                     </ul>
                                 </div>
                                 
@@ -821,17 +821,17 @@
                                 <div class="item mini-links">
                                     <h4>Libros Categorías</h4>
                                     <ul class="flexcol" th:each="Lista : ${LibrosC}">
-                                        <li th:text="${Lista.Arte}"><a href="#"></a>   </li>
-                                        <li th:text="${Lista.Biografias}"><a href="#"></a>  </li>
-                                        <li th:text="${Lista.Ciencias}"><a href="#"></a>  </li>
-                                        <li th:text="${Lista.Computacion}"><a href="#"></a>  </li>
-                                        <li th:text="${Lista.Deportes}"><a href="#"></a>  </li>
-                                        <li th:text="${Lista.Derecho}"><a href="#"></a>  </li>
-                                        <li th:text="${Lista.Economia}"><a href="#"></a>  </li>
-                                        <li th:text="${Lista.EstilosDeVida}"><a href="#"></a>  </li>
-                                        <li th:text="${Lista.Ficcion}"><a href="#"></a>  </li>
-                                        <li th:text="${Lista.FilosofiaYreligion}"><a href="#"></a>  </li>
-                                        <li th:text="${Lista.InfantilesYjuveniles}"><a href="#"></a>  </li>
+                                        <li><a href="#" th:text="${Lista.Arte}"></a></li>
+                                        <li><a href="#" th:text="${Lista.Biografias}"></a>  </li>
+                                        <li><a href="#" th:text="${Lista.Ciencias}"></a>  </li>
+                                        <li><a href="#" th:text="${Lista.Computacion}"></a>  </li>
+                                        <li><a href="#" th:text="${Lista.Deportes}"></a>  </li>
+                                        <li><a href="#" th:text="${Lista.Derecho}"></a>  </li>
+                                        <li><a href="#" th:text="${Lista.Economia}"></a>  </li>
+                                        <li><a href="#" th:text="${Lista.EstilosDeVida}"></a>  </li>
+                                        <li><a href="#" th:text="${Lista.Ficcion}"></a>  </li>
+                                        <li><a href="#" th:text="${Lista.FilosofiaYreligion}"></a>  </li>
+                                        <li><a href="#" th:text="${Lista.InfantilesYjuveniles}"></a>  </li>
                                     </ul>
                                 </div>
                             </div>
@@ -855,7 +855,7 @@
                             <div class="row">
                                 <div class="item mini-links">
                                     <h4>Sobre Nosotros</h4>
-                                    <ul class="flexcol">
+                                    <ul class="flexcol" >
                                         <li><a href="#">Información de la Compañía</a></li>
                                         <li><a href="#">Noticias</a></li>
                                         <li><a href="#">Inversores</a></li>

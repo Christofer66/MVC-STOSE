@@ -68,18 +68,18 @@ public class HomeController {
 		
 		//Sobre Nosotros
 		
-		Lista SobreN = new Lista();
-		SobreN.setInformacionDeLaCompañia("Informacion de la Compañia");
-		SobreN.setNoticias("Noticias");
-		SobreN.setInversores("Inversores");
-		SobreN.setPoliticas("Politicas");
-		SobreN.setValoracionDeLosClientes("Valoracion de los clientes");
+		Lista Nosotros = new Lista();
+		Nosotros.setIcompañia("Informacion de la Compañia");
+		Nosotros.setNoticias("Noticias");
+		Nosotros.setInversores("Inversores");
+		Nosotros.setPolíticas("Politicas");
+		Nosotros.setClienteV("Valoracion de los clientes");
 		
 		
-		List<Lista> ListSobreN = new ArrayList<>();
-		ListSobreN.add(SobreN);
+		List<Lista> ListNosotros = new ArrayList<>();
+		ListNosotros.add(Nosotros);
 		
-		model.addAttribute("SobreN", ListSobreN);
+		model.addAttribute("Nosotros", ListNosotros);
 		model.addAttribute("MetodosP", ListMetodosP);
 		model.addAttribute("LibrosC", ListLibrosC);
 		model.addAttribute("AyudaC", ListAyudaC);	
