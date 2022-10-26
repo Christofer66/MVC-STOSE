@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @RequestMapping("/app")
 public class HomeController {
 
-	@Value("${title.generic}")
+	@Value("${title.tienda}")
 	private String titlePage;
 
 	@GetMapping({ "/home", "/inicio", "/", "/Home", "Inicio" })
