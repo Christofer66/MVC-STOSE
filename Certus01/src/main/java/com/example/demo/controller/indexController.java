@@ -68,7 +68,7 @@ public class indexController {
 		Nosotros.setIempresa("Informacion de la Compañia");
 		Nosotros.setNoticias("Noticias");
 		Nosotros.setInversores("Inversores");
-		Nosotros.setPolíticas("Politicas");
+		Nosotros.setPoliticas("Politicas");
 		Nosotros.setClienteV("Valoracion de los clientes");
 		
 		List<Lista> ListNosotros = new ArrayList<>();

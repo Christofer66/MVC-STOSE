@@ -72,7 +72,7 @@ public class HomeController {
 		Nosotros.setIempresa("Informacion de la Compañia");
 		Nosotros.setNoticias("Noticias");
 		Nosotros.setInversores("Inversores");
-		Nosotros.setPolíticas("Políticas");
+		Nosotros.setPoliticas("Políticas");
 		Nosotros.setClienteV("Valoracion de los clientes");
 		
 		

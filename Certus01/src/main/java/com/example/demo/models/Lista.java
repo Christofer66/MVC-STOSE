@@ -31,7 +31,7 @@ public class Lista {
 	private String Iempresa;
 	private String Noticias;
 	private String Inversores;
-	private String Políticas;
+	private String Politicas;
 	private String ClienteV;
 	
 	
@@ -55,11 +55,11 @@ public class Lista {
 	public void setInversores(String inversores) {
 		Inversores = inversores;
 	}
-	public String getPolíticas() {
-		return Políticas;
+	public String getPoliticas() {
+		return Politicas;
 	}
-	public void setPolíticas(String políticas) {
-		Políticas = políticas;
+	public void setPoliticas(String politicas) {
+		Politicas = politicas;
 	}
 	public String getClienteV() {
 		return ClienteV;
