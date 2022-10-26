@@ -1,6 +1,6 @@
 package com.example.demo.models;
 
-public class Lista {
+public class tiendaModel {
 
 	//Ayuda y contacto
 	private String Cuenta;

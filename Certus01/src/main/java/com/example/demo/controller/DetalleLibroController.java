@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/app")
-public class DetalleLibroController {
+public class detalleLibroController {
 	
 	@Value("${title.detallelibro}")
 	private String titlePage;
 	
-	@GetMapping({"/detalle-libro","/","/Detalle-Libro"})
+	@GetMapping({"/detalle-libro", "/Detalle-Libro"})
 	public String DetalleLibro() {
 		
 		return "detalle-libro";

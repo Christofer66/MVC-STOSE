@@ -10,7 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.example.demo.models.Lista;
+import com.example.demo.models.tiendaModel;
 
 
 
@@ -18,16 +18,16 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 @RequestMapping("/app")
-public class HomeController {
+public class tiendaController {
 
 	@Value("${title.tienda}")
 	private String titlePage;
 
-	@GetMapping({ "/home", "/inicio", "/", "/Home", "Inicio" })
-	public String HolaMundo(Model model) {
+	@GetMapping({ "/tienda", "Tienda" })
+	public String Tienda(Model model) {
 
 		//Ayuda y contacto
-		Lista AyudaC = new Lista();
+		tiendaModel AyudaC = new tiendaModel();
 		AyudaC.setCuenta("Tu Cuenta");
 		AyudaC.setPedidos("Tus Pedidos");
 		AyudaC.setEnvios("Tarifas de Envio");
@@ -35,12 +35,12 @@ public class HomeController {
 		AyudaC.setContactanos("Contactanos");
 		
 		
-		List<Lista> ListAyudaC = new ArrayList<>();
+		List<tiendaModel> ListAyudaC = new ArrayList<>();
 		ListAyudaC.add(AyudaC);
 		
 		//Libros y categorias
 		
-		Lista LibrosC = new Lista();
+		tiendaModel LibrosC = new tiendaModel();
 		LibrosC.setArte("Arte");
 		LibrosC.setBiografias("Biografias");
 		LibrosC.setCiencias("Ciencias");
@@ -54,21 +54,21 @@ public class HomeController {
 		LibrosC.setInfantilesYjuveniles("Infantiles y Juveniles");
 		
 		
-		List<Lista> ListLibrosC = new ArrayList<>();
+		List<tiendaModel> ListLibrosC = new ArrayList<>();
 		ListLibrosC.add(LibrosC);
 		
 		//Metodos de pago
 		
-		Lista MetodosP = new Lista();
+		tiendaModel MetodosP = new tiendaModel();
 		MetodosP.setTarjetasDeCredito("Tarjetas de Credito");
 		MetodosP.setPaypal("Paypal");
 		
-		List<Lista> ListMetodosP = new ArrayList<>();
+		List<tiendaModel> ListMetodosP = new ArrayList<>();
 		ListMetodosP.add(MetodosP);
 		
 		//Sobre Nosotros
 		
-		Lista Nosotros = new Lista();
+		tiendaModel Nosotros = new tiendaModel();
 		Nosotros.setIempresa("Informacion de la Compañia");
 		Nosotros.setNoticias("Noticias");
 		Nosotros.setInversores("Inversores");
@@ -76,7 +76,7 @@ public class HomeController {
 		Nosotros.setClienteV("Valoracion de los clientes");
 		
 		
-		List<Lista> ListNosotros = new ArrayList<>();
+		List<tiendaModel> ListNosotros = new ArrayList<>();
 		ListNosotros.add(Nosotros);
 		
 		model.addAttribute("Nosotros", ListNosotros);
