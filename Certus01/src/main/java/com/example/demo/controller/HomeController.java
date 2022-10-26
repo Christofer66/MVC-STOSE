@@ -69,10 +69,10 @@ public class HomeController {
 		//Sobre Nosotros
 		
 		Lista Nosotros = new Lista();
-		Nosotros.setIcompañia("Informacion de la Compañia");
+		Nosotros.setIempresa("Informacion de la Compañia");
 		Nosotros.setNoticias("Noticias");
 		Nosotros.setInversores("Inversores");
-		Nosotros.setPolíticas("Politicas");
+		Nosotros.setPolíticas("Políticas");
 		Nosotros.setClienteV("Valoracion de los clientes");
 		
 		

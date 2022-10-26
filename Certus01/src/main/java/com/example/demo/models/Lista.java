@@ -28,7 +28,7 @@ public class Lista {
 	
 	//Sobre nosotros
 	
-	private String Icompañia;
+	private String Iempresa;
 	private String Noticias;
 	private String Inversores;
 	private String Políticas;
@@ -37,11 +37,11 @@ public class Lista {
 	
 	
 	//SOBRE NOSOTROS
-	public String getIcompañia() {
-		return Icompañia;
+	public String getIempresa() {
+		return Iempresa;
 	}
-	public void setIcompañia(String icompañia) {
-		Icompañia = icompañia;
+	public void setIempresa(String iempresa) {
+		Iempresa = iempresa;
 	}
 	public String getNoticias() {
 		return Noticias;
