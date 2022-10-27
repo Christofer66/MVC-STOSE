@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/app")
-public class detalleLibroController {
+public class DetalleLibroController {
 	
 	@Value("${title.detallelibro}")
 	private String titlePage;
