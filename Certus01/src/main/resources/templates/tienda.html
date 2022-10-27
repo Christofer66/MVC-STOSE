@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!--Cambiamos titulo de la pestaña-->
+    
     <title th:text="${TituloPagina}"></title>
     <link rel="shortcut icon" href="./assets/images_readme/logo/logoWhite.png">
     <link rel="stylesheet" href="/css/tienda.css">
@@ -29,30 +30,39 @@
 
         <header>
             <!-- header top -->
+            
+            
+                                
+            
             <div class="header-top mobile-hide">
                 <div class="container">
                     <div class="wrapper flexitem">
                         <div class="left">
-                            <ul class="flexitem main-links">
+                            <ul class="flexitem main-links" th:each="Lista : ${HeaderT}">
                                 <li class="links">
-                                    <li><a href="#">Blog</a></li>
-                                    <li><a href="#">Productos Destacados</a></li>
-                                    <li><a href="#">Lista de deseos</a></li>
+                                    <li><a href="#" th:text="${Lista.Blog}"></a></li>
+                                    <li><a href="#" th:text="${Lista.ProductosDestacados}"></a></li>
+                                    <li><a href="#" th:text="${Lista.ListaDeDeseos}"></a></li>
                                 </li>
                             </ul>
                         </div>
                         <div class="right">
-                            <ul class="flexitem main-links">
-                                <li><a href="#">Registrate</a></li>
-                                <li><a href="#">Mi Cuenta</a></li>
-                                <li><a href="#">Revision de Pedidos</a></li>
+                            <ul class="flexitem main-links" th:each="Lista : ${HeaderT}">
+                                <li><a href="#" th:text="${Lista.Registrate}"></a></li>
+                                <li><a href="#" th:text="${Lista.MiCuenta}"></a></li>
+                                <li><a href="#" th:text="${Lista.RevisionDePedidos}"></a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
 
+
+
+
             <!-- header-nav -->
+            
+            
             <div class="header-nav">
                 <div class="container">
                     <div class="wrapper flexitem">
@@ -60,10 +70,10 @@
                         <div class="left flexitem">
                             <div class="logo"><a href="/app/inicio"><span class="circle"></span>.Stose</a></div>
                             <nav class="mobile-hide">
-                                <ul class="flexitem second-links">
+                                <ul class="flexitem second-links" >
                                     <li><a href="/app/inicio">Inicio</a></li>
                                     <li><a href="/app/tienda">Tienda</a></li>
-                                    <li><a href="#">Costos de envío</a></li>
+                                    <li><a href="#" >Costos de envío</a></li>
                                     <li><a href="#">Nosotros</a></li>
                                 </ul>
                             </nav>
@@ -371,49 +381,49 @@
                                     <div class="filter">
                                         <div class="filter-block">
                                             <h4>Categorías</h4>
-                                            <ul>
+                                            <ul th:each="Lista : ${LibrosC}">
                                                 <li>
-                                                    <a href="#">Arte</a>
+                                                    <a href="#" th:text="${Lista.Arte}"></a>
                                                     <span class="count">20</span>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Biografías</a>
+                                                    <a href="#" th:text="${Lista.Biografias}"></a>
                                                     <span class="count">20</span>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Ciencias</a>
+                                                    <a href="#" th:text="${Lista.Ciencias}"></a>
                                                     <span class="count">20</span>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Computación</a>
+                                                    <a href="#" th:text="${Lista.Computacion}"></a>
                                                     <span class="count">20</span>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Deportes</a>
+                                                    <a href="#" th:text="${Lista.Deportes}"></a>
                                                     <span class="count">20</span>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Derecho</a>
+                                                    <a href="#" th:text="${Lista.Derecho}"></a>
                                                     <span class="count">20</span>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Economía</a>
+                                                    <a href="#" th:text="${Lista.Economia}"></a>
                                                     <span class="count">20</span>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Estilos de Vida</a>
+                                                    <a href="#" th:text="${Lista.EstilosDeVida}"></a>
                                                     <span class="count">20</span>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Ficción</a>
+                                                    <a href="#" th:text="${Lista.Ficcion}"></a>
                                                     <span class="count">20</span>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Filosfía y Religión</a>
+                                                    <a href="#" th:text="${Lista.FilosofiaYreligion}"></a>
                                                     <span class="count">20</span>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Infantiles y Juveniles</a>
+                                                    <a href="#" th:text="${Lista.InfantilesYjuveniles}"></a>
                                                     <span class="count">20</span>
                                                 </li>
                                             </ul>
@@ -794,7 +804,6 @@
                         <div class="flexwrap">
                             <div class="row">
                                 <div class="item mini-links">
-                                
                                 
                                 
                                 

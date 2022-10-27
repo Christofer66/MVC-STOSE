@@ -79,6 +79,35 @@ public class tiendaController {
 		List<tiendaModel> ListNosotros = new ArrayList<>();
 		ListNosotros.add(Nosotros);
 		
+		//Header top
+		
+		
+		tiendaModel HeaderT = new tiendaModel();
+		HeaderT.setBlog("Blog");
+		HeaderT.setProductosDestacados("Productos Destacados");
+		HeaderT.setListaDeDeseos("Lista de deseos");
+		HeaderT.setRegistrate("Registrate");
+		HeaderT.setMiCuenta("Mi cuenta");
+		HeaderT.setRevisionDePedidos("Revision de Pedidos");
+		
+		
+		List<tiendaModel> ListHeaderT = new ArrayList<>();
+		ListHeaderT.add(HeaderT);
+		
+		//Header nav
+		
+		tiendaModel HeaderN = new tiendaModel();
+		HeaderN.setInicio("Inicio");
+		HeaderN.setTienda("Tienda");
+		HeaderN.setCostoDeEnvio("Costo de envios");
+		HeaderN.setNosotros("Nosotros");
+		
+		
+		List<tiendaModel> ListHeaderN = new ArrayList<>();
+		ListHeaderN.add(HeaderN);
+		
+		model.addAttribute("HeaderT", ListHeaderN);
+		model.addAttribute("HeaderT", ListHeaderT);
 		model.addAttribute("Nosotros", ListNosotros);
 		model.addAttribute("MetodosP", ListMetodosP);
 		model.addAttribute("LibrosC", ListLibrosC);
