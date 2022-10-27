@@ -8,13 +8,11 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.example.demo.models.indexModel;
 import com.example.demo.models.tiendaModel;
-
-
-
-import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 @RequestMapping("/app")
@@ -25,8 +23,39 @@ public class indexController {
 
 	@GetMapping({ "/inicio", "/", "Inicio" })
 	public String ControllerIndex(Model model) {
+
+		//SECCION Libros en Tendencia
+		//Libro en Oferta
+		indexModel LibroO = new indexModel();
+
 		
-		//CONTENIDO DEL FOOTER 👇( ͡❛ ͜ʖ ͡❛)
+
+		List<indexModel> ListLibroO = new ArrayList<>();
+		ListLibroO.add(LibroO);
+
+		//Libros en Tendencia
+		indexModel LibroT = new indexModel();
+	
+
+
+
+		List<indexModel> ListLibroT = new ArrayList<>();
+		ListLibroT.add(LibroT);
+
+
+		//SECCION LIBROS DESTACADOS
+		//Libros Destacados
+		indexModel LibroD = new indexModel();
+
+
+
+
+
+		List<indexModel> ListLibroD = new ArrayList<>();
+		ListLibroD.add(LibroD);
+
+
+		//CONTENIDO DEL FOOTER
 		//Ayuda y contacto
 		tiendaModel AyudaC = new tiendaModel();
 		AyudaC.setCuenta("Tu Cuenta");
@@ -81,6 +110,9 @@ public class indexController {
 		model.addAttribute("LibrosC", ListLibrosC);
 		model.addAttribute("MetodosP", ListMetodosP);
 		model.addAttribute("Nosotros", ListNosotros);
+		model.addAttribute("LibroO", ListLibroO);
+		model.addAttribute("LibroT", ListLibroT);
+		model.addAttribute("LibroD", ListLibroD);
 
         return "index";
     }
