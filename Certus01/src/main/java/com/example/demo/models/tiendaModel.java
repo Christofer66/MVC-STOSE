@@ -34,8 +34,87 @@ public class tiendaModel {
 	private String Politicas;
 	private String ClienteV;
 	
+	//Header top
+	
+	private String Blog;
+	private String ProductosDestacados;
+	private String ListaDeDeseos;
+
+	private String Registrate;
+	private String MiCuenta;
+	private String RevisionDePedidos;
+	
+	//Header nav
+	
+	private String Inicio;
+	private String Tienda;
+	private String CostoDeEnvio;
+	private String Nosotros;
+	
+	//HEADER NAV
+	public String getInicio() {
+		return Inicio;
+	}
+	public void setInicio(String inicio) {
+		Inicio = inicio;
+	}
+	public String getTienda() {
+		return Tienda;
+	}
+	public void setTienda(String tienda) {
+		Tienda = tienda;
+	}
+	public String getCostoDeEnvio() {
+		return CostoDeEnvio;
+	}
+	public void setCostoDeEnvio(String costoDeEnvio) {
+		CostoDeEnvio = costoDeEnvio;
+	}
+	public String getNosotros() {
+		return Nosotros;
+	}
+	public void setNosotros(String nosotros) {
+		Nosotros = nosotros;
+	}
 	
 	
+	//HEADER TOP
+	public String getBlog() {
+		return Blog;
+	}
+	public void setBlog(String blog) {
+		Blog = blog;
+	}
+	public String getProductosDestacados() {
+		return ProductosDestacados;
+	}
+	public void setProductosDestacados(String productosDestacados) {
+		ProductosDestacados = productosDestacados;
+	}
+	public String getListaDeDeseos() {
+		return ListaDeDeseos;
+	}
+	public void setListaDeDeseos(String listaDeDeseos) {
+		ListaDeDeseos = listaDeDeseos;
+	}
+	public String getRegistrate() {
+		return Registrate;
+	}
+	public void setRegistrate(String registrate) {
+		Registrate = registrate;
+	}
+	public String getMiCuenta() {
+		return MiCuenta;
+	}
+	public void setMiCuenta(String miCuenta) {
+		MiCuenta = miCuenta;
+	}
+	public String getRevisionDePedidos() {
+		return RevisionDePedidos;
+	}
+	public void setRevisionDePedidos(String revisionDePedidos) {
+		RevisionDePedidos = revisionDePedidos;
+	}
 	//SOBRE NOSOTROS
 	public String getIempresa() {
 		return Iempresa;
