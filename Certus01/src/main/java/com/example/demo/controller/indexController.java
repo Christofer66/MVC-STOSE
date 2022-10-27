@@ -26,6 +26,7 @@ public class indexController {
 	@GetMapping({ "/inicio", "/", "Inicio" })
 	public String ControllerIndex(Model model) {
 		
+		//CONTENIDO DEL FOOTER 👇( ͡❛ ͜ʖ ͡❛)
 		//Ayuda y contacto
 		tiendaModel AyudaC = new tiendaModel();
 		AyudaC.setCuenta("Tu Cuenta");
@@ -74,7 +75,7 @@ public class indexController {
 		List<tiendaModel> ListNosotros = new ArrayList<>();
 		ListNosotros.add(Nosotros);
 
-        
+        //Models 
         model.addAttribute("TituloPagina", titlePage);
 		model.addAttribute("AyudaC", ListAyudaC);	
 		model.addAttribute("LibrosC", ListLibrosC);
