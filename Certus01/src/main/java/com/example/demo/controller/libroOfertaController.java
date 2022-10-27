@@ -18,7 +18,7 @@ public class libroOfertaController {
     @Value("${title.librooferta}")
     private String titlePage;
 
-    @GetMapping({ "/libro-oferta", "/Libro-Oferta"})
+    @GetMapping({ "/libro-oferta", "LibroOferta" })
     public String LibroOferta(Model model) {
 
         return "libro-oferta";
