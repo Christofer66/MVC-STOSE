@@ -22,6 +22,16 @@ public class DetalleLibroController {
 	@GetMapping({"/detalle-libro", "/Detalle-Libro"})
 	public String DetalleLibro(Model model) {
 		
+		//SECCION Carrito de compras
+		detalleLibroModel CarritoC = new detalleLibroModel();
+    	CarritoC.setCarritoCompras1("Contra el futuro");
+        CarritoC.setCarritoCompras2("Dataclismo");
+    	CarritoC.setCarritoCompras3("El enemigo conoce el sistema");
+    	CarritoC.setCarritoCompras4("Manipulados");
+    			
+    	List<detalleLibroModel> ListCarritoC = new ArrayList<>();
+        ListCarritoC.add(CarritoC);
+		
 		//DETALLE LIBROS
 		
 		detalleLibroModel DetalleLibro = new detalleLibroModel();
@@ -129,6 +139,7 @@ public class DetalleLibroController {
 	    model.addAttribute("Descripcion", ListDescripcion);
 	    model.addAttribute("Informacion", ListInformacion);
 	    model.addAttribute("LibroR", ListLibroR);
+	    model.addAttribute("CarritoC", ListCarritoC);
 	    
 		return "detalle-libro";
 	}

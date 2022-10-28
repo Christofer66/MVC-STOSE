@@ -99,7 +99,7 @@
                                                         <a href="#"><img src="./assets/products/apparel1.jpg" alt=""></a>
                                                     </div>
                                                     <div class="item-content">
-                                                        <p><a href="#">/*Nombre del libro*/</a></p>
+                                                        <p th:each="Lista : ${CarritoC}"><a href="#" th:text="${Lista.CarritoCompras1}"></a></p>
                                                         <span class="price">
                                                             <span>$46.50</span>
                                                             <span class="fly-item"><span>1x</span></span>
@@ -112,7 +112,7 @@
                                                         <a href="#"><img src="./assets/products/apparel1.jpg" alt=""></a>
                                                     </div>
                                                     <div class="item-content">
-                                                        <p><a href="#">/*Nombre del libro*/</a></p>
+                                                        <p th:each="Lista : ${CarritoC}"><a href="#" th:text="${Lista.CarritoCompras2}"></a></p>
                                                         <span class="price">
                                                             <span>$46.50</span>
                                                             <span class="fly-item"><span>1x</span></span>
@@ -125,7 +125,7 @@
                                                         <a href="#"><img src="./assets/products/apparel1.jpg" alt=""></a>
                                                     </div>
                                                     <div class="item-content">
-                                                        <p><a href="#">/*Nombre del libro*/</a></p>
+                                                        <p th:each="Lista : ${CarritoC}"><a href="#" th:text="${Lista.CarritoCompras3}"></a></p>
                                                         <span class="price">
                                                             <span>$46.50</span>
                                                             <span class="fly-item"><span>1x</span></span>
@@ -138,7 +138,7 @@
                                                         <a href="#"><img src="./assets/products/apparel1.jpg" alt=""></a>
                                                     </div>
                                                     <div class="item-content">
-                                                        <p><a href="#">/*Nombre del libro*/</a></p>
+                                                        <p th:each="Lista : ${CarritoC}"><a href="#" th:text="${Lista.CarritoCompras4}"></a></p>
                                                         <span class="price">
                                                             <span>$46.50</span>
                                                             <span class="fly-item"><span>1x</span></span>
@@ -493,7 +493,7 @@
                                                 <div class="stars"></div>
                                                 <span class="mini-text">(248)</span>
                                             </div>
-                                            <h3 class="main-links"><a href="/app/libro-oferta">La Divina Comedia - Infierno<br>Dante Alighieri</a></h3>
+                                            <h3 class="main-links" th:each="Lista : ${LibroO}"><a href="/app/libro-oferta" th:text="${Lista.libroOferta}"></a></h3>
                                             <div class="price">
                                                 <span class="current">$42.40</span>
                                                 <span class="normal mini-text">$52.99</span>
@@ -517,7 +517,7 @@
                                             <div class="discount circle flexcenter"><span>32%</span></div>
                                         </div>
                                         <div class="content">
-                                            <h3 class="main-links"><a href="#">*Nombre de libro*</a></h3>
+                                            <h3 class="main-links" th:each="Lista : ${LibroT}"><a href="#" th:text="${Lista.libroTendencia1}"></a></h3>
                                             <div class="rating">
                                                 <div class="stars"></div>
                                                 <span class="mini-text">(125)</span>
@@ -547,7 +547,7 @@
                                             <div class="discount circle flexcenter"><span>32%</span></div>
                                         </div>
                                         <div class="content">
-                                            <h3 class="main-links"><a href="#">*Nombre de libro*</a></h3>
+                                            <h3 class="main-links" th:each="Lista : ${LibroT}"><a href="#" th:text="${Lista.libroTendencia2}"></a></h3>
                                             <div class="rating">
                                                 <div class="stars"></div>
                                                 <span class="mini-text">(125)</span>
@@ -577,7 +577,7 @@
                                             <div class="discount circle flexcenter"><span>32%</span></div>
                                         </div>
                                         <div class="content">
-                                            <h3 class="main-links"><a href="#">*Nombre de libro*</a></h3>
+                                            <h3 class="main-links" th:each="Lista : ${LibroT}"><a href="#" th:text="${Lista.libroTendencia3}"></a></h3>
                                             <div class="rating">
                                                 <div class="stars"></div>
                                                 <span class="mini-text">(125)</span>
@@ -607,7 +607,7 @@
                                             <div class="discount circle flexcenter"><span>32%</span></div>
                                         </div>
                                         <div class="content">
-                                            <h3 class="main-links"><a href="#">*Nombre de libro*</a></h3>
+                                            <h3 class="main-links" th:each="Lista : ${LibroT}"><a href="#" th:text="${Lista.libroTendencia4}"></a></h3>
                                             <div class="rating">
                                                 <div class="stars"></div>
                                                 <span class="mini-text">(125)</span>
@@ -639,7 +639,7 @@
                                             <div class="discount circle flexcenter"><span>32%</span></div>
                                         </div>
                                         <div class="content">
-                                            <h3 class="main-links"><a href="#">*Nombre de libro*</a></h3><div class="rating">
+                                            <h3 class="main-links" th:each="Lista : ${LibroT}"><a href="#" th:text="${Lista.LibroTendencia5}"></a></h3><div class="rating">
                                                 <div class="stars"></div>
                                                 <span class="mini-text">(125)</span>
                                             </div>
@@ -668,7 +668,7 @@
                                             <div class="discount circle flexcenter"><span>32%</span></div>
                                         </div>
                                         <div class="content">
-                                            <h3 class="main-links"><a href="#">*Nombre de libro*</a></h3>
+                                            <h3 class="main-links" th:each="Lista : ${LibroT}"><a href="#" th:text="${Lista.LibroTendencia6}"></a></h3>
                                             <div class="rating">
                                                 <div class="stars"></div>
                                                 <span class="mini-text">(125)</span>
@@ -698,7 +698,7 @@
                                             <div class="discount circle flexcenter"><span>32%</span></div>
                                         </div>
                                         <div class="content">
-                                            <h3 class="main-links"><a href="#">*Nombre de libro*</a></h3>
+                                            <h3 class="main-links" th:each="Lista : ${LibroT}"><a href="#" th:text="${Lista.LibroTendencia7}"></a></h3>
                                             <div class="rating">
                                                 <div class="stars"></div>
                                                 <span class="mini-text">(125)</span>
@@ -728,7 +728,7 @@
                                             <div class="discount circle flexcenter"><span>32%</span></div>
                                         </div>
                                         <div class="content">
-                                            <h3 class="main-links"><a href="#">*Nombre de libro*</a></h3>
+                                            <h3 class="main-links" th:each="Lista : ${LibroT}"><a href="#" th:text="${Lista.LibroTendencia8}"></a></h3>
                                             <div class="rating">
                                                 <div class="stars"></div>
                                                 <span class="mini-text">(125)</span>
@@ -781,7 +781,7 @@
                                             <div class="stars"></div>
                                             <span class="mini-text">(156)</span>
                                         </div>
-                                        <h3><a href="/app/detalle-libro">*Nombre de libro*</a></h3>
+                                        <h3 th:each="Lista : ${LibroD}"><a href="/app/detalle-libro" th:text="${Lista.LibroDestacado1}"></a></h3>
                                         <div class="price">
                                             <div class="current">$46.50</div>
                                             <div class="normal mini-text">$65.50</div>
@@ -807,7 +807,7 @@
                                             <div class="stars"></div>
                                             <span class="mini-text">(156)</span>
                                         </div>
-                                        <h3><a href="/app/detalle-libro">*Nombre de libro*</a></h3>
+                                        <h3 th:each="Lista : ${LibroD}"><a href="/app/detalle-libro" th:text="${Lista.LibroDestacado2}"></a></h3>
                                         <div class="price">
                                             <div class="current">$46.50</div>
                                             <div class="normal mini-text">$65.50</div>
@@ -833,7 +833,7 @@
                                             <div class="stars"></div>
                                             <span class="mini-text">(156)</span>
                                         </div>
-                                        <h3><a href="/app/detalle-libro">*Nombre de libro*</a></h3>
+                                        <h3 th:each="Lista : ${LibroD}"><a href="/app/detalle-libro" th:text="${Lista.LibroDestacado3}"></a></h3>
                                         <div class="price">
                                             <div class="current">$46.50</div>
                                             <div class="normal mini-text">$65.50</div>
@@ -859,7 +859,7 @@
                                             <div class="stars"></div>
                                             <span class="mini-text">(156)</span>
                                         </div>
-                                        <h3><a href="/app/detalle-libro">*Nombre de libro*</a></h3>
+                                        <h3 th:each="Lista : ${LibroD}"><a href="/app/detalle-libro" th:text="${Lista.LibroDestacado4}"></a></h3>
                                         <div class="price">
                                             <div class="current">$46.50</div>
                                             <div class="normal mini-text">$65.50</div>
@@ -885,7 +885,7 @@
                                             <div class="stars"></div>
                                             <span class="mini-text">(156)</span>
                                         </div>
-                                        <h3><a href="/app/detalle-libro">*Nombre de libro*</a></h3>
+                                        <h3 th:each="Lista : ${LibroD}"><a href="/app/detalle-libro" th:text="${Lista.LibroDestacado5}"></a></h3>
                                         <div class="price">
                                             <div class="current">$46.50</div>
                                             <div class="normal mini-text">$65.50</div>
@@ -911,7 +911,7 @@
                                             <div class="stars"></div>
                                             <span class="mini-text">(156)</span>
                                         </div>
-                                        <h3><a href="/app/detalle-libro">*Nombre de libro*</a></h3>
+                                        <h3 th:each="Lista : ${LibroD}"><a href="/app/detalle-libro" th:text="${Lista.LibroDestacado6}"></a></h3>
                                         <div class="price">
                                             <div class="current">$46.50</div>
                                             <div class="normal mini-text">$65.50</div>
@@ -937,7 +937,7 @@
                                             <div class="stars"></div>
                                             <span class="mini-text">(156)</span>
                                         </div>
-                                        <h3><a href="/app/detalle-libro">*Nombre de libro*</a></h3>
+                                        <h3 th:each="Lista : ${LibroD}"><a href="/app/detalle-libro" th:text="${Lista.LibroDestacado7}"></a></h3>
                                         <div class="price">
                                             <div class="current">$46.50</div>
                                             <div class="normal mini-text">$65.50</div>
@@ -963,7 +963,7 @@
                                             <div class="stars"></div>
                                             <span class="mini-text">(156)</span>
                                         </div>
-                                        <h3><a href="/app/detalle-libro">*Nombre de libro*</a></h3>
+                                        <h3 th:each="Lista : ${LibroD}"><a href="/app/detalle-libro" th:text="${Lista.LibroDestacado8}"></a></h3>
                                         <div class="price">
                                             <div class="current">$46.50</div>
                                             <div class="normal mini-text">$65.50</div>
