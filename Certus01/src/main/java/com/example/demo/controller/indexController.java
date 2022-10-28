@@ -19,7 +19,7 @@ import com.example.demo.models.tiendaModel;
 public class indexController {
 
 	@Value("${title.index}")
-	private String titlePage;
+	private String TitlePage;
 
 	@GetMapping({ "/inicio", "/", "Inicio" })
 	public String ControllerIndex(Model model) {
@@ -27,18 +27,22 @@ public class indexController {
 		//SECCION Libros en Tendencia
 		//Libro en Oferta
 		indexModel LibroO = new indexModel();
-
+		LibroO.setLibroOferta("La Divina Comedia");
 		
-
 		List<indexModel> ListLibroO = new ArrayList<>();
 		ListLibroO.add(LibroO);
 
 		//Libros en Tendencia
 		indexModel LibroT = new indexModel();
-	
-
-
-
+		LibroT.setLibroTendencia1("Cambiemos el Mundo");
+		LibroT.setLibroTendencia2("Como evitar un desastre climatica");
+		LibroT.setLibroTendencia3("En el Mapa");
+		LibroT.setLibroTendencia4("La Gramática de la Arquitectura");
+		LibroT.setLibroTendencia5("Robin la Rebelde");
+		LibroT.setLibroTendencia6("El camino del artista");
+		LibroT.setLibroTendencia7("Delirio americano");
+		LibroT.setLibroTendencia8("El arte de escuchar");
+		
 		List<indexModel> ListLibroT = new ArrayList<>();
 		ListLibroT.add(LibroT);
 
@@ -46,10 +50,14 @@ public class indexController {
 		//SECCION LIBROS DESTACADOS
 		//Libros Destacados
 		indexModel LibroD = new indexModel();
-
-
-
-
+		LibroD.setLibroDestacado1("Las Vidas Secretas del Color");
+		LibroD.setLibroDestacado2("El Hilo Dorado");
+		LibroD.setLibroDestacado3("Nuestra Casa Esta Ardiendo");
+		LibroD.setLibroDestacado4("Cómo evitar la próxima pandemia");
+		LibroD.setLibroDestacado5("Siervas");
+		LibroD.setLibroDestacado6("Paula");
+		LibroD.setLibroDestacado7("El Placer de la Lectura");
+		LibroD.setLibroDestacado8("Hamlet");
 
 		List<indexModel> ListLibroD = new ArrayList<>();
 		ListLibroD.add(LibroD);
@@ -105,7 +113,7 @@ public class indexController {
 		ListNosotros.add(Nosotros);
 
         //Models 
-        model.addAttribute("TituloPagina", titlePage);
+        model.addAttribute("TituloPagina", TitlePage);
 		model.addAttribute("AyudaC", ListAyudaC);	
 		model.addAttribute("LibrosC", ListLibrosC);
 		model.addAttribute("MetodosP", ListMetodosP);
