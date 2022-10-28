@@ -1,18 +1,15 @@
 package com.example.demo.models;
 
-public class detalleLibroModel {
-	
-	
+public class libroOfertaModel {
 	//Libros relacionados
 	private String LibroRelacionado1;
 	private String LibroRelacionado2;
 	private String LibroRelacionado3;
 	private String LibroRelacionado4;
-	private String LibroRelacionado5;
+    private String LibroRelacionado5;
 	private String LibroRelacionado6;
 	private String LibroRelacionado7;
 	private String LibroRelacionado8;
-	
 	
 	//LIBROS RELACIONADOS
 	public String getLibroRelacionado1() {
@@ -70,5 +67,4 @@ public class detalleLibroModel {
     public void setLibroRelacionado8(String libroRelacionado8) {
         LibroRelacionado8 = libroRelacionado8;
     }
-
 }

@@ -9,7 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.example.demo.models.indexModel;
+import com.example.demo.models.detalleLibroModel;
 import com.example.demo.models.tiendaModel;
 
 @Controller
@@ -22,20 +22,19 @@ public class DetalleLibroController {
 	@GetMapping({"/detalle-libro", "/Detalle-Libro"})
 	public String DetalleLibro(Model model) {
 		
-		//SECCION detalle-libros
-		//Imagen de libro grande
 		
-		indexModel ImagenLibroG = new indexModel();
+		detalleLibroModel LibroR = new detalleLibroModel();
 		
-		List<indexModel> ListImagenLibroG = new ArrayList<>();
-		ListImagenLibroG.add(ImagenLibroG);
+		LibroR.setLibroRelacionado1("Chernobil Herbarium");
+		LibroR.setLibroRelacionado2("Los primeros hominidos");
+		LibroR.setLibroRelacionado3("¿Que puede salir mal?");
+		LibroR.setLibroRelacionado4("Cómo evitar un desastre climático");
+		LibroR.setLibroRelacionado5("Quimica del suelo");
+		LibroR.setLibroRelacionado6("Atlas de la biblia");
+		LibroR.setLibroRelacionado7("Nuevas realidades territoriales para el siglo XXI");
+		LibroR.setLibroRelacionado8("Psicogeografía");
 		
-		//SECCION libros relacionados
-		//Libros relacionados
-		
-		indexModel LibroR = new indexModel();
-		
-		List<indexModel> ListLibroR = new ArrayList<>();
+		List<detalleLibroModel> ListLibroR = new ArrayList<>();
 		ListLibroR.add(LibroR);
 		
 		//CONTENIDO DEL FOOTER
@@ -93,7 +92,6 @@ public class DetalleLibroController {
 	    model.addAttribute("LibrosC", ListLibrosC);
 	    model.addAttribute("MetodosP", ListMetodosP);
 	    model.addAttribute("Nosotros", ListNosotros);
-	    model.addAttribute("ImagenLibroG", ListImagenLibroG);
 	    model.addAttribute("LibroR", ListLibroR);
 	    
 		return "detalle-libro";
