@@ -23,6 +23,17 @@ public class indexController {
 
 	@GetMapping({ "/inicio", "/", "Inicio" })
 	public String ControllerIndex(Model model) {
+		
+		//SECCION Carrito de compras
+		indexModel CarritoC = new indexModel();
+		CarritoC.setCarritoCompras1("Contra el futuro");
+		CarritoC.setCarritoCompras2("Dataclismo");
+		CarritoC.setCarritoCompras3("El enemigo conoce el sistema");
+		CarritoC.setCarritoCompras4("Manipulados");
+		
+		List<indexModel> ListCarritoC = new ArrayList<>();
+		ListCarritoC.add(CarritoC);
+		
 
 		//SECCION Libros en Tendencia
 		//Libro en Oferta
@@ -121,6 +132,7 @@ public class indexController {
 		model.addAttribute("LibroO", ListLibroO);
 		model.addAttribute("LibroT", ListLibroT);
 		model.addAttribute("LibroD", ListLibroD);
+		model.addAttribute("CarritoC", ListCarritoC);
 
         return "index";
     }

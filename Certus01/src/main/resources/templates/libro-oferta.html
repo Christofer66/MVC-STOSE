@@ -319,9 +319,9 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="item">
-                                            <h1>La Divina Comedia</h1><br>
-                                            <h3>Dante Alighieri - Akal</h3>
+                                        <div class="item" th:each="Lista : ${DetalleLibro}">
+                                            <h1 th:text="${Lista.Titulo}"></h1><br>
+                                            <h3 th:text="${Lista.Autor}"></h3>
                                             <div class="content">
                                                 <div class="rating">
                                                     <div class="stars"></div>
@@ -363,18 +363,18 @@
                                                     <ul>
                                                         <li class="has-child">
                                                             <a href="#0" class="icon-small">Descripción</a>
-                                                            <div class="content">
-                                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, iure quas optio necessitatibus aperiam sed tempora amet assumenda ducimus excepturi nobis omnis ad expedita saepe odit delectus placeat maxime corporis.</p>
+                                                            <div class="content" th:each="Lista : ${Descripcion}">
+                                                                <p th:text="${Lista.Contenido}"></p>
                                                             </div>
                                                         </li>
                                                         <li class="has-child">
                                                             <a href="#0" class="icon-small">Información</a>
-                                                            <ul class="content">
-                                                                <li><span>Autor</span> <span>Dante Alighieri</span></li>
-                                                                <li><span>Categoría</span> <span>Poesía, Ficción Clásica</span></span></li>
-                                                                <li><span>Año de<br> publicación</span> <span>2021</span></li>
-                                                                <li><span>Editorial</span> <span>Akal</span></li>
-                                                                <li><span>Número de<br> páginas</span> <span>832</span></li>
+                                                             <ul class="content" th:each="Lista : ${Informacion}">
+                                                                <li ><span>Autor</span> <span th:text="${Lista.AutorInfo}"></span></li>
+                                                                <li><span>Categoría</span> <span th:text="${Lista.Categoria}"></span></li>
+                                                                <li ><span>Año de<br> publicación</span > <span th:text="${Lista.AnoPublicacion}"></span></li>
+                                                                <li><span>Editorial</span> <span th:text="${Lista.Editorial}"></span></li>
+                                                                <li ><span>Número de<br> páginas</span> <span th:text="${Lista.NumeroPaginas}"></span></li>
                                                             </ul>
                                                         </li>
                                                         <li class="has-child">

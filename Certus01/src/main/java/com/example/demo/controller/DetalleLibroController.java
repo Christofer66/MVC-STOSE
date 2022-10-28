@@ -22,7 +22,40 @@ public class DetalleLibroController {
 	@GetMapping({"/detalle-libro", "/Detalle-Libro"})
 	public String DetalleLibro(Model model) {
 		
+		//DETALLE LIBROS
 		
+		detalleLibroModel DetalleLibro = new detalleLibroModel();
+		
+		DetalleLibro.setTitulo("Romeo y Julieta");
+		DetalleLibro.setAutor("William Shakespeare - Panamericana");
+		
+		List<detalleLibroModel> ListDetalleLibro = new ArrayList<>();
+		ListDetalleLibro.add(DetalleLibro);
+		
+		//DESCRIPCION
+		
+		detalleLibroModel Descripcion = new detalleLibroModel();
+		
+		Descripcion.setContenido("Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, iure quas optio necessitatibus aperiam sed tempora amet assumenda ducimus excepturi nobis omnis ad expedita saepe odit delectus placeat maxime corporis.");
+		
+		List<detalleLibroModel> ListDescripcion = new ArrayList<>();
+		ListDescripcion.add(Descripcion);
+		
+		//INFORMACION
+		detalleLibroModel Informacion = new detalleLibroModel();
+		
+		Informacion.setAutorInfo(" William Shakespeare");
+		Informacion.setCategoria("Libros Juveniles");
+		Informacion.setAnoPublicacion("2017");
+		Informacion.setEditorial("Panamericana");
+		Informacion.setNumeroPaginas("50");
+		
+		List<detalleLibroModel> ListInformacion = new ArrayList<>();
+		ListInformacion.add(Informacion);
+		
+		
+		
+		//LIBROS RELACIONADOS
 		detalleLibroModel LibroR = new detalleLibroModel();
 		
 		LibroR.setLibroRelacionado1("Chernobil Herbarium");
@@ -92,6 +125,9 @@ public class DetalleLibroController {
 	    model.addAttribute("LibrosC", ListLibrosC);
 	    model.addAttribute("MetodosP", ListMetodosP);
 	    model.addAttribute("Nosotros", ListNosotros);
+	    model.addAttribute("DetalleLibro", ListDetalleLibro);
+	    model.addAttribute("Descripcion", ListDescripcion);
+	    model.addAttribute("Informacion", ListInformacion);
 	    model.addAttribute("LibroR", ListLibroR);
 	    
 		return "detalle-libro";

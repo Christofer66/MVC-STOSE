@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.example.demo.models.indexModel;
 import com.example.demo.models.tiendaModel;
 
 
@@ -25,6 +26,16 @@ public class tiendaController {
 
 	@GetMapping({ "/tienda", "Tienda" })
 	public String Tienda(Model model) {
+		
+		//SECCION Carrito de compras
+		indexModel CarritoC = new indexModel();
+		CarritoC.setCarritoCompras1("Contra el futuro");
+		CarritoC.setCarritoCompras2("Dataclismo");
+		CarritoC.setCarritoCompras3("El enemigo conoce el sistema");
+		CarritoC.setCarritoCompras4("Manipulados");
+				
+		List<indexModel> ListCarritoC = new ArrayList<>();
+		ListCarritoC.add(CarritoC);
 
 		//Ayuda y contacto
 		tiendaModel AyudaC = new tiendaModel();
@@ -115,6 +126,7 @@ public class tiendaController {
 		model.addAttribute("TituloPagina", titlePage);
 		model.addAttribute("Titulo", "Tienda");
 		model.addAttribute("Libros", "La divina comedia");
+		model.addAttribute("CarritoC", ListCarritoC);
 
 
 		return "tienda";

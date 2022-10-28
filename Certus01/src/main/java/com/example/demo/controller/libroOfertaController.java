@@ -22,6 +22,39 @@ public class libroOfertaController {
     @GetMapping({ "/libro-oferta", "Libro-Oferta" })
     public String LibroOferta(Model model) {
     	
+    	//DETALLE LIBROS
+		
+    	libroOfertaModel DetalleLibro = new libroOfertaModel();
+		
+		DetalleLibro.setTitulo("La Divina Comedia");
+		DetalleLibro.setAutor("Dante Alighieri - Akal");
+		
+		List<libroOfertaModel> ListDetalleLibro = new ArrayList<>();
+		ListDetalleLibro.add(DetalleLibro);
+		
+		//DESCRIPCION
+		
+		libroOfertaModel Descripcion = new libroOfertaModel();
+		
+		Descripcion.setContenido("Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, iure quas optio necessitatibus aperiam sed tempora amet assumenda ducimus excepturi nobis omnis ad expedita saepe odit delectus placeat maxime corporis.");
+		
+		List<libroOfertaModel> ListDescripcion = new ArrayList<>();
+		ListDescripcion.add(Descripcion);
+		
+		//INFORMACION
+		libroOfertaModel Informacion = new libroOfertaModel();
+		
+		Informacion.setAutorInfo("  Dante Alighieri");
+		Informacion.setCategoria("Poesía, Ficción Clásica");
+		Informacion.setAnoPublicacion("2021");
+		Informacion.setEditorial("Akal");
+		Informacion.setNumeroPaginas("832");
+		
+		List<libroOfertaModel> ListInformacion = new ArrayList<>();
+		ListInformacion.add(Informacion);
+    	
+    	
+    	//LIBROS RELACIONADOS
     	libroOfertaModel LibroR = new libroOfertaModel();
 		
 		LibroR.setLibroRelacionado1("Chernobil Herbarium");
@@ -91,6 +124,9 @@ public class libroOfertaController {
 	    model.addAttribute("LibrosC", ListLibrosC);
 	    model.addAttribute("MetodosP", ListMetodosP);
 	    model.addAttribute("Nosotros", ListNosotros);
+	    model.addAttribute("DetalleLibro", ListDetalleLibro);
+	    model.addAttribute("Descripcion", ListDescripcion);
+	    model.addAttribute("Informacion", ListInformacion);
 	    model.addAttribute("LibroR", ListLibroR);
 
         return "libro-oferta";
